@@ -1,0 +1,1774 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Võ Nguyễn Phương Uyên — Chuyên viên Nội dung Website & SEO</title>
+  
+  <meta name="description" content="Portfolio của Võ Nguyễn Phương Uyên — Chuyên viên Quản trị Nội dung Website, SEO On-page và E-commerce WooCommerce với nền tảng Công nghệ Thông tin.">
+  <meta name="author" content="Võ Nguyễn Phương Uyên">
+
+  <!-- Typography: Playfair Display + Be Vietnam Pro -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&display=swap" rel="stylesheet">
+
+  <style>
+    /* ==========================================================================
+       DESIGN TOKENS & RESET
+       Phong cách: Modern Editorial × Personal Creative Portfolio
+       Góc vuông hoàn toàn (border-radius: 0), không gradient, không glassmorphism
+       ========================================================================== */
+    :root {
+      --bg-main: #F7F3EA;        /* Warm Ivory */
+      --bg-sub: #EAE3D7;         /* Soft Beige */
+      --text-main: #29251F;       /* Dark Espresso */
+      --text-muted: #6B6457;      /* Warm Muted Tone */
+      --accent-red: #C84B45;      /* Cherry Red (Điểm nhấn có chủ đích) */
+      --accent-yellow: #E9D99A;   /* Butter Yellow */
+      --accent-sage: #A8B19A;     /* Dusty Sage */
+      --border-line: #D8CEBE;     /* Hairline Border */
+      --border-dark: #29251F;     /* Solid Accent Border */
+      
+      --font-serif: 'Playfair Display', Georgia, serif;
+      --font-sans: 'Be Vietnam Pro', -apple-system, BlinkMacSystemFont, sans-serif;
+    }
+
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      border-radius: 0 !important; /* Tuyệt đối không bo góc */
+    }
+
+    html {
+      scroll-behavior: smooth;
+      background-color: var(--bg-main);
+      color: var(--text-main);
+    }
+
+    body {
+      font-family: var(--font-sans);
+      font-size: 15px;
+      line-height: 1.65;
+      background-color: var(--bg-main);
+      color: var(--text-main);
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+    }
+
+    /* Selection Styling */
+    ::selection {
+      background: var(--accent-red);
+      color: #FFFFFF;
+    }
+
+    /* Container */
+    .container {
+      width: 100%;
+      max-width: 1240px;
+      margin: 0 auto;
+      padding: 0 32px;
+    }
+
+    /* Editorial Typography Rules */
+    h1, h2, h3, h4, .serif-font {
+      font-family: var(--font-serif);
+      font-weight: 600;
+      letter-spacing: -0.02em;
+      line-height: 1.2;
+    }
+
+    .eyebrow {
+      font-family: var(--font-sans);
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      font-weight: 600;
+      color: var(--accent-red);
+      display: inline-block;
+      margin-bottom: 12px;
+    }
+
+    .num-label {
+      font-family: var(--font-serif);
+      font-style: italic;
+      color: var(--accent-red);
+      font-size: 15px;
+      margin-right: 8px;
+    }
+
+    /* Hairline Dividers */
+    .divider-solid {
+      border: 0;
+      border-top: 1px solid var(--border-line);
+      margin: 0;
+    }
+
+    /* ==========================================================================
+       HEADER & NAVIGATION
+       Tối giản, nền phẳng không kính mờ, đường kẻ mảnh phân tách
+       ========================================================================== */
+    header.site-header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: var(--bg-main);
+      border-bottom: 1px solid var(--border-line);
+      width: 100%;
+    }
+
+    .nav-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 72px;
+    }
+
+    .nav-brand {
+      font-family: var(--font-serif);
+      font-size: 18px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-decoration: none;
+      color: var(--text-main);
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .brand-dot {
+      width: 7px;
+      height: 7px;
+      background: var(--accent-red);
+      display: inline-block;
+    }
+
+    .nav-links {
+      display: flex;
+      list-style: none;
+      gap: 36px;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: var(--text-main);
+      font-size: 13px;
+      font-weight: 500;
+      letter-spacing: 0.04em;
+      position: relative;
+      padding-bottom: 4px;
+      transition: color 0.2s ease;
+    }
+
+    .nav-links a::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0;
+      height: 1px;
+      background-color: var(--accent-red);
+      transition: width 0.25s ease;
+    }
+
+    .nav-links a:hover {
+      color: var(--accent-red);
+    }
+
+    .nav-links a:hover::after {
+      width: 100%;
+    }
+
+    .nav-status {
+      font-size: 12px;
+      color: var(--text-muted);
+      border-left: 1px solid var(--border-line);
+      padding-left: 24px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .status-indicator {
+      width: 6px;
+      height: 6px;
+      background: var(--accent-sage);
+      display: inline-block;
+    }
+
+    /* ==========================================================================
+       HERO SECTION — BỐ CỤC BẤT ĐỐI XỨNG CÓ CHỦ ĐÍCH
+       ========================================================================== */
+    .hero-section {
+      padding: 70px 0 80px;
+      border-bottom: 1px solid var(--border-line);
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.25fr 0.85fr;
+      gap: 60px;
+      align-items: start;
+    }
+
+    .hero-kicker-bar {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      margin-bottom: 24px;
+    }
+
+    .hero-line {
+      height: 1px;
+      width: 40px;
+      background: var(--accent-red);
+    }
+
+    .hero-name {
+      font-size: 58px;
+      font-weight: 700;
+      line-height: 1.08;
+      letter-spacing: -0.03em;
+      color: var(--text-main);
+      margin-bottom: 18px;
+    }
+
+    .hero-name span.italic-red {
+      font-style: italic;
+      color: var(--accent-red);
+      font-weight: 400;
+    }
+
+    .hero-roles {
+      font-family: var(--font-serif);
+      font-size: 22px;
+      font-style: italic;
+      color: var(--text-muted);
+      margin-bottom: 28px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .hero-roles span.role-sep {
+      color: var(--accent-red);
+      font-style: normal;
+      font-size: 14px;
+    }
+
+    .hero-intro {
+      font-size: 16px;
+      line-height: 1.8;
+      color: var(--text-main);
+      max-width: 580px;
+      margin-bottom: 36px;
+    }
+
+    .hero-meta-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      border-top: 1px solid var(--border-line);
+      border-bottom: 1px solid var(--border-line);
+      padding: 18px 0;
+      margin-bottom: 36px;
+    }
+
+    .meta-col {
+      padding-right: 18px;
+    }
+
+    .meta-col:not(:last-child) {
+      border-right: 1px solid var(--border-line);
+      margin-right: 18px;
+    }
+
+    .meta-label {
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--text-muted);
+      margin-bottom: 4px;
+      font-weight: 600;
+    }
+
+    .meta-val {
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--text-main);
+    }
+
+    .hero-action-row {
+      display: flex;
+      gap: 16px;
+      align-items: center;
+    }
+
+    /* Buttons: Chữ nhật góc vuông chuẩn Editorial */
+    .btn-editorial {
+      font-family: var(--font-sans);
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: 0.06em;
+      text-decoration: none;
+      text-transform: uppercase;
+      padding: 14px 26px;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      border: 1px solid var(--text-main);
+      background: var(--text-main);
+      color: var(--bg-main);
+      transition: all 0.2s ease;
+      cursor: pointer;
+    }
+
+    .btn-editorial:hover {
+      background: var(--accent-red);
+      border-color: var(--accent-red);
+      color: #FFFFFF;
+    }
+
+    .btn-editorial-outline {
+      font-family: var(--font-sans);
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: 0.06em;
+      text-decoration: none;
+      text-transform: uppercase;
+      padding: 14px 26px;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      border: 1px solid var(--border-dark);
+      background: transparent;
+      color: var(--text-main);
+      transition: all 0.2s ease;
+      cursor: pointer;
+    }
+
+    .btn-editorial-outline:hover {
+      border-color: var(--accent-red);
+      color: var(--accent-red);
+      background: rgba(200, 75, 69, 0.04);
+    }
+
+    /* Hero Right: Real Portrait with Editorial Framing */
+    .hero-portrait-frame {
+      border: 1px solid var(--border-dark);
+      background: var(--bg-sub);
+      padding: 16px;
+      position: relative;
+    }
+
+    .portrait-inner {
+      width: 100%;
+      height: 440px;
+      background: #E4DCD0;
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid var(--border-line);
+    }
+
+    .portrait-inner img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center top;
+      filter: grayscale(18%) contrast(102%);
+      transition: filter 0.3s ease;
+    }
+
+    .portrait-inner:hover img {
+      filter: grayscale(0%) contrast(105%);
+    }
+
+    .portrait-caption {
+      margin-top: 12px;
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      font-size: 11px;
+      color: var(--text-muted);
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .portrait-caption strong {
+      color: var(--text-main);
+    }
+
+    /* ==========================================================================
+       ABOUT / GIỚI THIỆU — EDITORIAL SPLIT LAYOUT
+       ========================================================================== */
+    .section-pad {
+      padding: 90px 0;
+    }
+
+    .section-border {
+      border-bottom: 1px solid var(--border-line);
+    }
+
+    .editorial-split {
+      display: grid;
+      grid-template-columns: 0.8fr 1.2fr;
+      gap: 60px;
+      margin-bottom: 60px;
+    }
+
+    .section-title {
+      font-size: 38px;
+      line-height: 1.15;
+      color: var(--text-main);
+      margin-bottom: 16px;
+    }
+
+    .section-title-sub {
+      font-size: 14px;
+      color: var(--text-muted);
+      max-width: 320px;
+      line-height: 1.7;
+    }
+
+    .about-lead {
+      font-family: var(--font-serif);
+      font-size: 21px;
+      line-height: 1.65;
+      color: var(--text-main);
+      margin-bottom: 22px;
+      font-style: italic;
+    }
+
+    .about-lead span.highlight-lead {
+      color: var(--accent-red);
+      font-style: normal;
+      font-weight: 600;
+    }
+
+    .about-body {
+      font-size: 15px;
+      color: var(--text-muted);
+      line-height: 1.8;
+      margin-bottom: 20px;
+    }
+
+    /* 3 Nhóm thế mạnh: Trình bày typography & đường kẻ (không dùng card) */
+    .pillars-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      border-top: 1px solid var(--border-line);
+      border-bottom: 1px solid var(--border-line);
+    }
+
+    .pillar-item {
+      padding: 36px 30px;
+      background: transparent;
+      border-right: 1px solid var(--border-line);
+    }
+
+    .pillar-item:last-child {
+      border-right: none;
+    }
+
+    .pillar-num {
+      font-family: var(--font-serif);
+      font-size: 14px;
+      font-style: italic;
+      color: var(--accent-red);
+      margin-bottom: 14px;
+      display: block;
+    }
+
+    .pillar-heading {
+      font-size: 19px;
+      margin-bottom: 12px;
+      color: var(--text-main);
+    }
+
+    .pillar-desc {
+      font-size: 13.5px;
+      color: var(--text-muted);
+      line-height: 1.7;
+    }
+
+    /* ==========================================================================
+       WORK EXPERIENCE — TIMELINE EDITORIAL
+       ========================================================================== */
+    .experience-list {
+      margin-top: 40px;
+      border-top: 1px solid var(--border-dark);
+    }
+
+    .experience-row {
+      display: grid;
+      grid-template-columns: 240px 1.4fr;
+      gap: 40px;
+      padding: 44px 0;
+      border-bottom: 1px solid var(--border-line);
+    }
+
+    .exp-sidebar {
+      position: relative;
+    }
+
+    .exp-period {
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--accent-red);
+      margin-bottom: 8px;
+    }
+
+    .exp-company {
+      font-family: var(--font-serif);
+      font-size: 20px;
+      line-height: 1.25;
+      color: var(--text-main);
+      margin-bottom: 6px;
+    }
+
+    .exp-location {
+      font-size: 12px;
+      color: var(--text-muted);
+    }
+
+    .exp-content {
+      padding-left: 20px;
+      border-left: 1px solid var(--border-line);
+    }
+
+    .exp-role-title {
+      font-size: 17px;
+      font-weight: 700;
+      color: var(--text-main);
+      margin-bottom: 16px;
+    }
+
+    .exp-tasks {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      margin-bottom: 20px;
+    }
+
+    .exp-tasks li {
+      font-size: 14px;
+      line-height: 1.75;
+      color: #38332B;
+      position: relative;
+      padding-left: 18px;
+    }
+
+    .exp-tasks li::before {
+      content: '—';
+      position: absolute;
+      left: 0;
+      color: var(--accent-red);
+    }
+
+    .exp-tasks strong {
+      color: var(--text-main);
+      font-weight: 600;
+    }
+
+    .exp-badge-achievement {
+      background: var(--bg-sub);
+      border-left: 3px solid var(--accent-red);
+      padding: 12px 18px;
+      font-size: 13px;
+      font-weight: 500;
+      color: var(--text-main);
+      display: inline-block;
+    }
+
+    .exp-badge-achievement strong {
+      color: var(--accent-red);
+      font-weight: 700;
+    }
+
+    /* ==========================================================================
+       SELECTED PROJECTS — SHOWCASE PHONG CÁCH DESIGNER
+       Bố cục ảnh lớn xen kẽ, mockup trình duyệt góc vuông, typography rõ nét
+       ========================================================================== */
+    .project-showcase {
+      display: flex;
+      flex-direction: column;
+      gap: 70px;
+      margin-top: 50px;
+    }
+
+    .project-item {
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      gap: 50px;
+      align-items: center;
+      padding-bottom: 70px;
+      border-bottom: 1px solid var(--border-line);
+    }
+
+    .project-item.reversed {
+      grid-template-columns: 0.85fr 1.15fr;
+    }
+
+    .project-item.reversed .project-visual-col {
+      order: 2;
+    }
+
+    .project-item.reversed .project-info-col {
+      order: 1;
+    }
+
+    /* Mockup trình duyệt tối giản góc vuông */
+    .browser-frame {
+      border: 1px solid var(--border-dark);
+      background: #FFFFFF;
+      position: relative;
+    }
+
+    .browser-bar {
+      height: 32px;
+      background: var(--bg-sub);
+      border-bottom: 1px solid var(--border-line);
+      display: flex;
+      align-items: center;
+      padding: 0 12px;
+      gap: 8px;
+    }
+
+    .browser-dots {
+      display: flex;
+      gap: 6px;
+    }
+
+    .dot {
+      width: 7px;
+      height: 7px;
+      background: var(--border-line);
+      display: inline-block;
+    }
+
+    .browser-url {
+      font-size: 11px;
+      color: var(--text-muted);
+      letter-spacing: 0.02em;
+      margin-left: 10px;
+      font-family: monospace;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .browser-content {
+      width: 100%;
+      height: 340px;
+      position: relative;
+      overflow: hidden;
+      background: #F0ECE3;
+    }
+
+    /* Mockup Visual Graphics (CSS Editorial Vector) */
+    .mockup-preview {
+      width: 100%;
+      height: 100%;
+      padding: 24px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: transform 0.35s ease;
+    }
+
+    .browser-frame:hover .mockup-preview {
+      transform: scale(1.02);
+    }
+
+    /* Project Visual Variants */
+    .visual-sapa {
+      background: #E7ECE6; /* Muted Sage-tint */
+      border-bottom: 3px solid var(--accent-sage);
+    }
+
+    .visual-greece {
+      background: #E8EEF4; /* Aegean Sea Wash */
+      border-bottom: 3px solid #748CA6;
+    }
+
+    .visual-golf {
+      background: #EFECE4; /* Fairway Sand Wash */
+      border-bottom: 3px solid var(--accent-yellow);
+    }
+
+    .visual-wrap {
+      background: #ECE5DC; /* Consumer Goods Warm Beige */
+      border-bottom: 3px solid var(--accent-red);
+    }
+
+    .mockup-header-line {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-bottom: 12px;
+      border-bottom: 1px solid rgba(41, 37, 31, 0.15);
+    }
+
+    .mockup-logo-text {
+      font-family: var(--font-serif);
+      font-size: 16px;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      color: var(--text-main);
+    }
+
+    .mockup-nav-ghost {
+      display: flex;
+      gap: 12px;
+    }
+
+    .ghost-bar {
+      width: 32px;
+      height: 6px;
+      background: rgba(41, 37, 31, 0.2);
+    }
+
+    .mockup-hero-box {
+      margin: auto 0;
+      text-align: center;
+      padding: 20px;
+      border: 1px dashed rgba(41, 37, 31, 0.2);
+      background: rgba(255, 255, 255, 0.6);
+    }
+
+    .mockup-hero-title {
+      font-family: var(--font-serif);
+      font-size: 24px;
+      color: var(--text-main);
+      margin-bottom: 6px;
+    }
+
+    .mockup-hero-sub {
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      color: var(--accent-red);
+    }
+
+    .mockup-footer-stats {
+      display: flex;
+      justify-content: space-between;
+      font-size: 10px;
+      color: var(--text-muted);
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      border-top: 1px solid rgba(41, 37, 31, 0.15);
+      padding-top: 10px;
+    }
+
+    /* Project Info Column */
+    .project-index {
+      font-family: var(--font-serif);
+      font-size: 14px;
+      font-style: italic;
+      color: var(--accent-red);
+      margin-bottom: 8px;
+    }
+
+    .project-category {
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      color: var(--text-muted);
+      margin-bottom: 8px;
+      font-weight: 600;
+    }
+
+    .project-title {
+      font-size: 28px;
+      line-height: 1.2;
+      color: var(--text-main);
+      margin-bottom: 16px;
+    }
+
+    .project-desc {
+      font-size: 14px;
+      line-height: 1.8;
+      color: var(--text-muted);
+      margin-bottom: 20px;
+    }
+
+    .project-tech-stack {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 24px;
+    }
+
+    .tech-tag {
+      font-size: 11px;
+      letter-spacing: 0.04em;
+      padding: 4px 10px;
+      background: var(--bg-sub);
+      color: var(--text-main);
+      border: 1px solid var(--border-line);
+      font-weight: 500;
+    }
+
+    .project-link-btn {
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      font-weight: 700;
+      color: var(--text-main);
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      border-bottom: 1px solid var(--text-main);
+      padding-bottom: 4px;
+      transition: all 0.2s ease;
+    }
+
+    .project-link-btn:hover {
+      color: var(--accent-red);
+      border-color: var(--accent-red);
+      padding-left: 4px;
+    }
+
+    /* ==========================================================================
+       SKILLS — DANH MỤC CHUYÊN MÔN THEO DẠNG EDITORIAL
+       ========================================================================== */
+    .skills-editorial-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      border-top: 1px solid var(--border-dark);
+      margin-top: 40px;
+    }
+
+    .skill-category-col {
+      padding: 36px 30px;
+      border-right: 1px solid var(--border-line);
+      border-bottom: 1px solid var(--border-line);
+    }
+
+    .skill-category-col:nth-child(3n) {
+      border-right: none;
+    }
+
+    .skill-cat-title {
+      font-family: var(--font-serif);
+      font-size: 20px;
+      color: var(--text-main);
+      margin-bottom: 16px;
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+    }
+
+    .skill-cat-title span.cat-index {
+      font-size: 12px;
+      font-style: italic;
+      color: var(--accent-red);
+    }
+
+    .skill-item-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .skill-item-list li {
+      font-size: 13.5px;
+      color: #3C362E;
+      line-height: 1.6;
+      padding-bottom: 8px;
+      border-bottom: 1px dotted var(--border-line);
+    }
+
+    .skill-item-list li:last-child {
+      border-bottom: none;
+    }
+
+    .skill-item-list strong {
+      color: var(--text-main);
+    }
+
+    /* ==========================================================================
+       CONTACT — LIÊN HỆ & KẾT THÚC ẤN TƯỢNG
+       ========================================================================== */
+    .contact-section {
+      padding: 100px 0 90px;
+      background: var(--bg-sub);
+      border-top: 1px solid var(--border-dark);
+      border-bottom: 1px solid var(--border-dark);
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1.3fr 0.9fr;
+      gap: 60px;
+      align-items: center;
+    }
+
+    .contact-heading-large {
+      font-size: 50px;
+      line-height: 1.1;
+      margin-bottom: 20px;
+      color: var(--text-main);
+    }
+
+    .contact-heading-large span.italic-red {
+      font-style: italic;
+      color: var(--accent-red);
+    }
+
+    .contact-subtext {
+      font-size: 16px;
+      color: var(--text-muted);
+      line-height: 1.8;
+      max-width: 520px;
+      margin-bottom: 30px;
+    }
+
+    .contact-details-box {
+      border-left: 1px solid var(--border-line);
+      padding-left: 36px;
+    }
+
+    .contact-item-row {
+      margin-bottom: 24px;
+    }
+
+    .contact-row-label {
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      color: var(--text-muted);
+      margin-bottom: 6px;
+      font-weight: 600;
+    }
+
+    .contact-row-val {
+      font-size: 19px;
+      font-family: var(--font-serif);
+      color: var(--text-main);
+      text-decoration: none;
+      display: inline-block;
+      transition: color 0.2s ease;
+    }
+
+    .contact-row-val:hover {
+      color: var(--accent-red);
+    }
+
+    .contact-location-val {
+      font-size: 15px;
+      color: var(--text-main);
+    }
+
+    /* Footer Tối Giản */
+    footer.site-footer {
+      padding: 34px 0;
+      background: var(--bg-main);
+    }
+
+    .footer-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 12px;
+      color: var(--text-muted);
+      letter-spacing: 0.04em;
+    }
+
+    .footer-signature {
+      font-family: var(--font-serif);
+      font-style: italic;
+      color: var(--text-main);
+    }
+
+    /* ==========================================================================
+       RESPONSIVE DESIGN (Desktop, Tablet, Mobile)
+       ========================================================================== */
+    @media (max-width: 980px) {
+      .hero-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+      }
+      .hero-portrait-frame {
+        max-width: 480px;
+      }
+      .editorial-split {
+        grid-template-columns: 1fr;
+        gap: 30px;
+      }
+      .pillars-grid {
+        grid-template-columns: 1fr;
+      }
+      .pillar-item {
+        border-right: none;
+        border-bottom: 1px solid var(--border-line);
+        padding: 26px 0;
+      }
+      .experience-row {
+        grid-template-columns: 1fr;
+        gap: 20px;
+      }
+      .exp-content {
+        padding-left: 0;
+        border-left: none;
+        border-top: 1px solid var(--border-line);
+        padding-top: 20px;
+      }
+      .project-item, .project-item.reversed {
+        grid-template-columns: 1fr;
+        gap: 30px;
+      }
+      .project-item.reversed .project-visual-col {
+        order: 1;
+      }
+      .project-item.reversed .project-info-col {
+        order: 2;
+      }
+      .skills-editorial-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      .contact-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+      }
+      .contact-details-box {
+        padding-left: 0;
+        border-left: none;
+        border-top: 1px solid var(--border-line);
+        padding-top: 30px;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .container {
+        padding: 0 20px;
+      }
+      .nav-links, .nav-status {
+        display: none;
+      }
+      .hero-name {
+        font-size: 40px;
+      }
+      .hero-roles {
+        font-size: 18px;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 4px;
+      }
+      .hero-roles span.role-sep {
+        display: none;
+      }
+      .hero-meta-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+      }
+      .meta-col:not(:last-child) {
+        border-right: none;
+        border-bottom: 1px solid var(--border-line);
+        padding-bottom: 12px;
+        margin-right: 0;
+      }
+      .skills-editorial-grid {
+        grid-template-columns: 1fr;
+      }
+      .skill-category-col {
+        border-right: none !important;
+        padding: 24px 0;
+      }
+      .contact-heading-large {
+        font-size: 34px;
+      }
+      .footer-inner {
+        flex-direction: column;
+        gap: 12px;
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ==========================================================================
+       HEADER
+       ========================================================================== -->
+  <header class="site-header">
+    <div class="container">
+      <div class="nav-inner">
+        <a href="#" class="nav-brand">
+          <span class="brand-dot"></span>
+          <span>PHUONG UYEN</span>
+        </a>
+        <nav>
+          <ul class="nav-links">
+            <li><a href="#about">Giới thiệu</a></li>
+            <li><a href="#experience">Kinh nghiệm</a></li>
+            <li><a href="#projects">Dự án</a></li>
+            <li><a href="#skills">Kỹ năng</a></li>
+            <li><a href="#contact">Liên hệ</a></li>
+          </ul>
+        </nav>
+        <div class="nav-status">
+          <span class="status-indicator"></span>
+          <span>Sẵn sàng cho công việc mới</span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ==========================================================================
+       HERO SECTION — BỐ CỤC BẤT ĐỐI XỨNG EDITORIAL
+       ========================================================================== -->
+  <section class="hero-section">
+    <div class="container">
+      <div class="hero-grid">
+        
+        <!-- Cột trái: Giới thiệu & Typography -->
+        <div class="hero-content-col">
+          <div class="hero-kicker-bar">
+            <span class="hero-line"></span>
+            <span class="eyebrow" style="margin-bottom: 0;">Portfolio Cá Nhân — 2026</span>
+          </div>
+
+          <h1 class="hero-name">
+            Võ Nguyễn<br>
+            <span class="italic-red">Phương Uyên</span>
+          </h1>
+
+          <div class="hero-roles">
+            <span>Website Content</span>
+            <span class="role-sep">/</span>
+            <span>SEO & E-commerce</span>
+          </div>
+
+          <p class="hero-intro">
+            Tôi có nền tảng Công nghệ Thông tin, kinh nghiệm quản trị website WordPress, tối ưu nội dung và vận hành dữ liệu thương mại điện tử. Tôi yêu thích việc kết hợp tư duy kỹ thuật, nội dung và thẩm mỹ để tạo nên những trải nghiệm website chỉn chu.
+          </p>
+
+          <div class="hero-meta-grid">
+            <div class="meta-col">
+              <div class="meta-label">Chuyên môn</div>
+              <div class="meta-val">Web Content & SEO</div>
+            </div>
+            <div class="meta-col">
+              <div class="meta-label">Học vấn</div>
+              <div class="meta-val">Cử nhân CNTT (HUIT)</div>
+            </div>
+            <div class="meta-col">
+              <div class="meta-label">Địa điểm</div>
+              <div class="meta-val">TP. Hồ Chí Minh</div>
+            </div>
+          </div>
+
+          <div class="hero-action-row">
+            <a href="#projects" class="btn-editorial">
+              <span>Xem dự án thực tế</span>
+              <span>↓</span>
+            </a>
+            <a href="#contact" class="btn-editorial-outline">
+              <span>Thông tin liên hệ</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Cột phải: Ảnh chân dung thực tế trong khung Editorial -->
+        <div class="hero-portrait-col">
+          <div class="hero-portrait-frame">
+            <div class="portrait-inner">
+              <img src="avatar.png" alt="Chân dung Võ Nguyễn Phương Uyên" onerror="this.onerror=null; this.parentElement.innerHTML='<div style=\'text-align:center; padding:30px; font-family:var(--font-serif); font-size:24px;\'>Võ Nguyễn Phương Uyên<br><span style=\'font-size:12px; font-family:var(--font-sans); color:var(--text-muted); text-transform:uppercase; letter-spacing:0.12em;\'>Web Content Specialist</span></div>';">
+            </div>
+            <div class="portrait-caption">
+              <span><strong>01 // Chân dung</strong></span>
+              <span>TP. Hồ Chí Minh — 2026</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       ABOUT / GIỚI THIỆU — EDITORIAL SPLIT LAYOUT
+       ========================================================================== */
+  <section class="section-pad section-border" id="about">
+    <div class="container">
+      
+      <div class="editorial-split">
+        <div>
+          <span class="eyebrow">01 // Định vị chuyên môn</span>
+          <h2 class="section-title">Nội dung chỉn chu trên nền tảng kỹ thuật vững vàng</h2>
+          <p class="section-title-sub">
+            Kết hợp kiến thức lập trình Công nghệ Thông tin cùng sự nhạy bén trong ngôn từ và trải nghiệm người dùng On-page.
+          </p>
+        </div>
+
+        <div>
+          <p class="about-lead">
+            "Không chỉ đơn thuần là viết bài, tôi tập trung vào <span class="highlight-lead">cách nội dung vận hành</span> trên hệ thống website: từ cấu trúc heading, tốc độ tải trang, dữ liệu sản phẩm chuẩn xác cho đến khả năng hiển thị tối ưu trên công cụ tìm kiếm."
+          </p>
+          <p class="about-body">
+            Tốt nghiệp ngành Công nghệ Thông tin tại Trường Đại học Công Thương TP.HCM, tôi sở hữu lợi thế am hiểu cấu trúc HTML/CSS, hệ thống quản trị nội dung CMS WordPress và cơ chế quản trị hosting Plesk. Khi kết hợp với kinh nghiệm kiểm duyệt dữ liệu nghiêm ngặt và kỹ năng biên tập nội dung, tôi có thể chủ động xử lý các vấn đề giao diện, tối ưu On-page và triển khai dữ liệu thương mại điện tử mà không bị phụ thuộc hoàn toàn vào đội ngũ kỹ thuật.
+          </p>
+        </div>
+      </div>
+
+      <!-- 3 Nhóm thế mạnh: Trình bày typography & đường kẻ -->
+      <div class="pillars-grid">
+        <div class="pillar-item">
+          <span class="pillar-num">A.</span>
+          <h3 class="pillar-heading">Quản trị Website</h3>
+          <p class="pillar-desc">
+            Thành thạo WordPress CMS, các theme phổ biến như Flatsome, Elementor. Tự tin tùy biến bố cục bằng CSS/HTML, quản lý hosting Plesk và cấu hình go-live website hoàn chỉnh.
+          </p>
+        </div>
+
+        <div class="pillar-item">
+          <span class="pillar-num">B.</span>
+          <h3 class="pillar-heading">Nội dung & SEO</h3>
+          <p class="pillar-desc">
+            Biên tập nội dung chuẩn On-page, tối ưu thẻ meta, cấu trúc liên kết và theo dõi tình trạng Google Index. Ứng dụng AI thông minh để tối ưu hóa quy trình nghiên cứu và lên ý tưởng.
+          </p>
+        </div>
+
+        <div class="pillar-item">
+          <span class="pillar-num">C.</span>
+          <h3 class="pillar-heading">Kiểm duyệt Dữ liệu</h3>
+          <p class="pillar-desc">
+            Kinh nghiệm kiểm duyệt nội dung sàn thương mại điện tử với thành tích Top 1 KPI. Cẩn trọng, tỉ mỉ trong việc phát hiện trùng lặp (Duplicate), thông tin giả mạo (Fake) và lỗi hiển thị.
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       WORK EXPERIENCE — TIMELINE EDITORIAL
+       ========================================================================== -->
+  <section class="section-pad section-border" id="experience">
+    <div class="container">
+      
+      <div style="display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 24px;">
+        <div>
+          <span class="eyebrow">02 // Hành trình nghề nghiệp</span>
+          <h2 class="section-title">Kinh nghiệm làm việc</h2>
+        </div>
+        <p style="font-size: 13px; color: var(--text-muted); max-width: 320px; text-align: right;" class="hide-mobile">
+          Quá trình thực chiến từ quản trị hoàn thiện website, sàn TMĐT đến kiểm duyệt nội dung theo tiêu chuẩn cao.
+        </p>
+      </div>
+
+      <div class="experience-list">
+
+        <!-- Kinh nghiệm 1: Mắt Bão WS -->
+        <div class="experience-row">
+          <div class="exp-sidebar">
+            <div class="exp-period">08/2025 — 10/2026</div>
+            <h3 class="exp-company">CÔNG TY CỔ PHẦN MẮT BÃO WS</h3>
+            <div class="exp-location">TP. Hồ Chí Minh</div>
+          </div>
+          <div class="exp-content">
+            <h4 class="exp-role-title">Fulfillment — Hoàn thiện Website & Quản trị Nội dung</h4>
+            <ul class="exp-tasks">
+              <li>Trực tiếp quản trị và vận hành nội dung website trên nền tảng <strong>WordPress CMS</strong>, thực hiện cập nhật, biên tập và tối ưu nội dung theo yêu cầu khách hàng.</li>
+              <li>Xây dựng, chỉnh sửa và sắp xếp nội dung các trang website, đảm bảo thông tin rõ ràng, bố cục hợp lý và phù hợp với định hướng thương hiệu.</li>
+              <li>Sử dụng linh hoạt các theme phổ biến như <strong>Flatsome, Elementor, BB-theme</strong>; tùy chỉnh giao diện bằng <strong>CSS, HTML</strong> để đáp ứng các yêu cầu thiết kế mà template mặc định chưa hỗ trợ.</li>
+              <li>Cập nhật thông tin sản phẩm, hình ảnh và dữ liệu đơn hàng trên <strong>WooCommerce</strong>, đảm bảo tính chính xác và đồng nhất của dữ liệu.</li>
+              <li>Thực hiện tối ưu nội dung website theo các tiêu chí <strong>SEO cơ bản</strong>, tra cứu index trên Google, kiểm tra tốc độ tải trang và điểm SEO.</li>
+              <li>Thực hiện các thao tác go-live website: Trỏ tên miền chính, cấu hình Contact Form 7, xử lý các thao tác quản trị trên <strong>Plesk</strong>.</li>
+              <li>Nghiên cứu, lựa chọn và chỉnh sửa hình ảnh, banner, logo bằng <strong>Canva</strong> và công cụ AI hỗ trợ sáng tạo hình ảnh.</li>
+              <li>Ứng dụng <strong>ChatGPT, Sider, Gemini, Nano Banana</strong> để hỗ trợ nghiên cứu thông tin, phát triển ý tưởng, biên soạn nội dung và tối ưu hiệu suất công việc.</li>
+              <li>Tiếp nhận yêu cầu, xử lý ticket và hỗ trợ kỹ thuật website cho khách hàng qua hotline, email một cách nhanh chóng, chuyên nghiệp.</li>
+            </ul>
+            <div class="exp-badge-achievement">
+              Thành tích: <strong>Hoàn thành tốt dự án</strong>, hỗ trợ khách hàng nhiệt tình, hoàn thành công việc có trách nhiệm, đạt số liệu KPI mà công ty đưa ra.
+            </div>
+          </div>
+        </div>
+
+        <!-- Kinh nghiệm 2: Transcosmos Việt Nam -->
+        <div class="experience-row">
+          <div class="exp-sidebar">
+            <div class="exp-period">07/2024 — 01/2025</div>
+            <h3 class="exp-company">CÔNG TY TNHH TRANSCOSMOS VIỆT NAM</h3>
+            <div class="exp-location">TP. Hồ Chí Minh</div>
+          </div>
+          <div class="exp-content">
+            <h4 class="exp-role-title">Nhân viên Kiểm duyệt Nội dung</h4>
+            <ul class="exp-tasks">
+              <li>Xử lý dữ liệu hình ảnh thông qua hệ thống quản lý của công ty và xác minh thông tin từ data của khách hàng.</li>
+              <li>Xem xét, phân loại và kiểm duyệt nội dung trên nền tảng thương mại điện tử theo yêu cầu của dự án <strong>App Social Video</strong>.</li>
+              <li>Đánh dấu, gỡ bỏ các nội dung sai phạm theo đúng quy định và chính sách của dự án.</li>
+              <li>So sánh, đối chiếu dữ liệu để phát hiện các trường hợp <strong>Duplicate</strong> (trùng lặp) và <strong>Fake</strong> (giả mạo).</li>
+              <li>Đảm bảo hoàn thành khối lượng và chất lượng công việc theo yêu cầu khắt khe từ phía khách hàng.</li>
+            </ul>
+            <div class="exp-badge-achievement">
+              Thành tích: <strong>Luôn đạt Top 1 KPI hàng tháng</strong>, nghiêm túc trong công việc, ít sai sót trong quá trình làm việc và kiểm duyệt.
+            </div>
+          </div>
+        </div>
+
+        <!-- Kinh nghiệm 3: Beework Vietnam -->
+        <div class="experience-row">
+          <div class="exp-sidebar">
+            <div class="exp-period">03/2024 — 06/2024</div>
+            <h3 class="exp-company">CÔNG TY TNHH BEEWORK VIETNAM</h3>
+            <div class="exp-location">TP. Hồ Chí Minh</div>
+          </div>
+          <div class="exp-content">
+            <h4 class="exp-role-title">Cộng tác viên Xử lý Dữ liệu Hình ảnh</h4>
+            <ul class="exp-tasks">
+              <li>Thiết kế banner và logo phục vụ các dự án truyền thông của công ty.</li>
+              <li>Tham gia các dự án xử lý dữ liệu và kiểm tra chất lượng hình ảnh sản phẩm theo yêu cầu.</li>
+              <li>Đảm bảo tính chính xác, quy chuẩn kích thước và độ hiển thị hình ảnh trước khi bàn giao.</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Kinh nghiệm 4: ISVN20 -->
+        <div class="experience-row">
+          <div class="exp-sidebar">
+            <div class="exp-period">10/2023 — 12/2023</div>
+            <h3 class="exp-company">CÔNG TY CỔ PHẦN ISVN20</h3>
+            <div class="exp-location">TP. Hồ Chí Minh</div>
+          </div>
+          <div class="exp-content">
+            <h4 class="exp-role-title">Social Media & Quản trị Nội dung</h4>
+            <ul class="exp-tasks">
+              <li>Tham gia xây dựng và quản trị website trên nền tảng <strong>WordPress</strong>.</li>
+              <li>Phát triển nội dung Content Marketing phục vụ hoạt động truyền thông và nhận diện thương hiệu.</li>
+              <li>Triển khai tiếp thị truyền thông xã hội, chụp ảnh và chỉnh sửa video phục vụ bài đăng.</li>
+              <li>Thực hiện tối ưu và đẩy từ khóa lên top công cụ tìm kiếm Google; xây dựng hệ thống liên kết Social — Backlink.</li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       SELECTED PROJECTS — DỰ ÁN TIÊU BIỂU
+       Trình bày theo phong cách portfolio designer, bố cục ảnh lớn xen kẽ
+       ========================================================================== -->
+  <section class="section-pad section-border" id="projects">
+    <div class="container">
+      
+      <div style="display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 20px;">
+        <div>
+          <span class="eyebrow">03 // Sản phẩm thực tế</span>
+          <h2 class="section-title">Dự án tiêu biểu</h2>
+        </div>
+        <p style="font-size: 13px; color: var(--text-muted); max-width: 320px; text-align: right;" class="hide-mobile">
+          Các website thực tế do tôi trực tiếp triển khai giao diện, biên tập nội dung và tối ưu vận hành.
+        </p>
+      </div>
+
+      <div class="project-showcase">
+
+        <!-- Dự án 1: Sapa Rose Garden Resort -->
+        <div class="project-item">
+          <div class="project-visual-col">
+            <div class="browser-frame">
+              <div class="browser-bar">
+                <div class="browser-dots">
+                  <span class="dot"></span>
+                  <span class="dot"></span>
+                  <span class="dot"></span>
+                </div>
+                <div class="browser-url">https://saparosegardenresortcomvn282.mbws.vn</div>
+              </div>
+              <div class="browser-content">
+                <div class="mockup-preview visual-sapa">
+                  <div class="mockup-header-line">
+                    <span class="mockup-logo-text">SAPA ROSE GARDEN</span>
+                    <div class="mockup-nav-ghost">
+                      <span class="ghost-bar"></span>
+                      <span class="ghost-bar"></span>
+                      <span class="ghost-bar"></span>
+                    </div>
+                  </div>
+                  <div class="mockup-hero-box">
+                    <div class="mockup-hero-title">Khu Nghỉ Dưỡng Sinh Thái</div>
+                    <div class="mockup-hero-sub">Trải nghiệm không gian nghỉ dưỡng Tây Bắc</div>
+                  </div>
+                  <div class="mockup-footer-stats">
+                    <span>WordPress CMS</span>
+                    <span>Tùy biến CSS/HTML</span>
+                    <span>Responsive Toàn Diện</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="project-info-col">
+            <div class="project-index">01 / DỰ ÁN NGHỈ DƯỠNG</div>
+            <div class="project-category">Du lịch & Khách sạn</div>
+            <h3 class="project-title">Sapa Rose Garden Resort</h3>
+            <p class="project-desc">
+              Tiếp nhận yêu cầu từ khách hàng và triển khai hoàn thiện giao diện website trên WordPress. Tùy chỉnh bố cục và xây dựng thêm các section theo yêu cầu thực tế; chỉnh sửa hình ảnh, icon phù hợp nhận diện thương hiệu. Tùy chỉnh CSS/HTML và tối ưu Responsive đồng nhất trên Desktop, Tablet và Mobile.
+            </p>
+            <div class="project-tech-stack">
+              <span class="tech-tag">WordPress CMS</span>
+              <span class="tech-tag">HTML & CSS</span>
+              <span class="tech-tag">Responsive Design</span>
+              <span class="tech-tag">Tối ưu hình ảnh</span>
+            </div>
+            <a href="https://saparosegardenresortcomvn282.mbws.vn/" target="_blank" rel="noopener noreferrer" class="project-link-btn">
+              <span>Mở website thực tế</span>
+              <span>↗</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Dự án 2: Định cư Hy Lạp (Reversed Layout) -->
+        <div class="project-item reversed">
+          <div class="project-visual-col">
+            <div class="browser-frame">
+              <div class="browser-bar">
+                <div class="browser-dots">
+                  <span class="dot"></span>
+                  <span class="dot"></span>
+                  <span class="dot"></span>
+                </div>
+                <div class="browser-url">https://hylap122.mbws.vn</div>
+              </div>
+              <div class="browser-content">
+                <div class="mockup-preview visual-greece">
+                  <div class="mockup-header-line">
+                    <span class="mockup-logo-text">GOLDEN VISA GREECE</span>
+                    <div class="mockup-nav-ghost">
+                      <span class="ghost-bar"></span>
+                      <span class="ghost-bar"></span>
+                    </div>
+                  </div>
+                  <div class="mockup-hero-box">
+                    <div class="mockup-hero-title">Định Cư Hy Lạp</div>
+                    <div class="mockup-hero-sub">Chương trình đầu tư nhận thẻ thường trú Châu Âu</div>
+                  </div>
+                  <div class="mockup-footer-stats">
+                    <span>Contact Form 7</span>
+                    <span>Bố cục thông tin</span>
+                    <span>Tối ưu hiển thị</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="project-info-col">
+            <div class="project-index">02 / DỰ ÁN TƯ VẤN ĐẦU TƯ</div>
+            <div class="project-category">Dịch vụ & Tư vấn Định cư</div>
+            <h3 class="project-title">Định Cư Hy Lạp</h3>
+            <p class="project-desc">
+              Xây dựng và sắp xếp các trang nội dung giới thiệu chương trình đầu tư Golden Visa. Cấu hình Contact Form 7 thu thập thông tin khách hàng tiềm năng, kiểm tra các liên kết chuyển hướng và tối ưu bố cục văn bản rõ ràng, dễ tiếp cận trên mọi thiết bị.
+            </p>
+            <div class="project-tech-stack">
+              <span class="tech-tag">WordPress</span>
+              <span class="tech-tag">Contact Form 7</span>
+              <span class="tech-tag">Biên tập nội dung</span>
+              <span class="tech-tag">Lead Capture</span>
+            </div>
+            <a href="https://hylap122.mbws.vn/" target="_blank" rel="noopener noreferrer" class="project-link-btn">
+              <span>Mở website thực tế</span>
+              <span>↗</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Dự án 3: Lotus Fairway Golf Travel -->
+        <div class="project-item">
+          <div class="project-visual-col">
+            <div class="browser-frame">
+              <div class="browser-bar">
+                <div class="browser-dots">
+                  <span class="dot"></span>
+                  <span class="dot"></span>
+                  <span class="dot"></span>
+                </div>
+                <div class="browser-url">https://lotusfairwaygolftravelcom915.mbws.vn</div>
+              </div>
+              <div class="browser-content">
+                <div class="mockup-preview visual-golf">
+                  <div class="mockup-header-line">
+                    <span class="mockup-logo-text">LOTUS FAIRWAY GOLF</span>
+                    <div class="mockup-nav-ghost">
+                      <span class="ghost-bar"></span>
+                      <span class="ghost-bar"></span>
+                      <span class="ghost-bar"></span>
+                    </div>
+                  </div>
+                  <div class="mockup-hero-box">
+                    <div class="mockup-hero-title">Golf Travel & Resorts</div>
+                    <div class="mockup-hero-sub">Tour golf cao cấp kết hợp du lịch nghỉ dưỡng</div>
+                  </div>
+                  <div class="mockup-footer-stats">
+                    <span>Banner Design</span>
+                    <span>SEO Cơ bản</span>
+                    <span>Tốc độ tải trang</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="project-info-col">
+            <div class="project-index">03 / DỰ ÁN THỂ THAO CAO CẤP</div>
+            <div class="project-category">Thể thao & Lữ hành</div>
+            <h3 class="project-title">Lotus Fairway Golf Travel</h3>
+            <p class="project-desc">
+              Hoàn thiện website giới thiệu dịch vụ tour golf cao cấp. Thiết kế và điều chỉnh banner hình ảnh theo tông màu sang trọng, tối ưu dung lượng hình ảnh để đảm bảo tốc độ tải trang nhanh và hỗ trợ thiết lập điểm SEO On-page cơ bản.
+            </p>
+            <div class="project-tech-stack">
+              <span class="tech-tag">WordPress CMS</span>
+              <span class="tech-tag">Thiết kế Canva</span>
+              <span class="tech-tag">SEO On-page</span>
+              <span class="tech-tag">Tối ưu Media</span>
+            </div>
+            <a href="https://lotusfairwaygolftravelcom915.mbws.vn/" target="_blank" rel="noopener noreferrer" class="project-link-btn">
+              <span>Mở website thực tế</span>
+              <span>↗</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Dự án 4: Màng Bọc Thực Phẩm (Reversed Layout) -->
+        <div class="project-item reversed">
+          <div class="project-visual-col">
+            <div class="browser-frame">
+              <div class="browser-bar">
+                <div class="browser-dots">
+                  <span class="dot"></span>
+                  <span class="dot"></span>
+                  <span class="dot"></span>
+                </div>
+                <div class="browser-url">https://baoquanthucphamvn937.mbws.vn</div>
+              </div>
+              <div class="browser-content">
+                <div class="mockup-preview visual-wrap">
+                  <div class="mockup-header-line">
+                    <span class="mockup-logo-text">FOOD WRAP VIETNAM</span>
+                    <div class="mockup-nav-ghost">
+                      <span class="ghost-bar"></span>
+                      <span class="ghost-bar"></span>
+                    </div>
+                  </div>
+                  <div class="mockup-hero-box">
+                    <div class="mockup-hero-title">Màng Bọc Thực Phẩm</div>
+                    <div class="mockup-hero-sub">Giải pháp đóng gói và bảo quản thực phẩm an toàn</div>
+                  </div>
+                  <div class="mockup-footer-stats">
+                    <span>WooCommerce</span>
+                    <span>Quản lý sản phẩm</span>
+                    <span>Google Index Check</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="project-info-col">
+            <div class="project-index">04 / DỰ ÁN THƯƠNG MẠI ĐIỆN TỬ</div>
+            <div class="project-category">Sản phẩm Tiêu dùng & Bao bì</div>
+            <h3 class="project-title">Màng Bọc Thực Phẩm</h3>
+            <p class="project-desc">
+              Cập nhật thông tin chi tiết sản phẩm, bảng giá và phân loại mặt hàng qua WooCommerce. Tối ưu hình ảnh sản phẩm, kiểm tra trạng thái lập chỉ mục (index) trên Google và hỗ trợ go-live website đúng tiến độ cam kết.
+            </p>
+            <div class="project-tech-stack">
+              <span class="tech-tag">WooCommerce</span>
+              <span class="tech-tag">Dữ liệu Sản phẩm</span>
+              <span class="tech-tag">Google Index</span>
+              <span class="tech-tag">Plesk Host</span>
+            </div>
+            <a href="https://baoquanthucphamvn937.mbws.vn/" target="_blank" rel="noopener noreferrer" class="project-link-btn">
+              <span>Mở website thực tế</span>
+              <span>↗</span>
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       SKILLS — DANH MỤC CHUYÊN MÔN
+       ========================================================================== -->
+  <section class="section-pad section-border" id="skills">
+    <div class="container">
+      
+      <div style="display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 20px;">
+        <div>
+          <span class="eyebrow">04 // Năng lực thực tế</span>
+          <h2 class="section-title">Kỹ năng chuyên môn</h2>
+        </div>
+        <p style="font-size: 13px; color: var(--text-muted); max-width: 320px; text-align: right;" class="hide-mobile">
+          Phân loại các kỹ năng đã được kiểm chứng qua quá trình học tập và công việc thực tế.
+        </p>
+      </div>
+
+      <div class="skills-editorial-grid">
+
+        <!-- Nhóm 1: Website CMS -->
+        <div class="skill-category-col">
+          <h3 class="skill-cat-title">
+            <span>Website CMS</span>
+            <span class="cat-index">01</span>
+          </h3>
+          <ul class="skill-item-list">
+            <li><strong>WordPress CMS:</strong> Quản trị, biên tập nội dung, bài viết, trang và danh mục.</li>
+            <li><strong>WooCommerce:</strong> Nhập liệu sản phẩm, quản lý đơn hàng và dữ liệu bán hàng.</li>
+            <li><strong>Theme & Builder:</strong> Flatsome, Elementor, BB-theme...</li>
+            <li><strong>Go-Live Website:</strong> Cấu hình tên miền, form liên hệ và cài đặt plugin.</li>
+          </ul>
+        </div>
+
+        <!-- Nhóm 2: SEO & Content -->
+        <div class="skill-category-col">
+          <h3 class="skill-cat-title">
+            <span>SEO & Content</span>
+            <span class="cat-index">02</span>
+          </h3>
+          <ul class="skill-item-list">
+            <li><strong>SEO On-page:</strong> Tối ưu thẻ Heading (H1-H4), Meta Title, Meta Description.</li>
+            <li><strong>Tối ưu nội dung:</strong> Mật độ từ khóa, trải nghiệm đọc và bố cục trang.</li>
+            <li><strong>Google Index:</strong> Kiểm tra trạng thái lập chỉ mục, tốc độ tải trang.</li>
+            <li><strong>Liên kết:</strong> Xây dựng hệ thống Social Media — Backlink cơ bản.</li>
+          </ul>
+        </div>
+
+        <!-- Nhóm 3: AI Tools -->
+        <div class="skill-category-col">
+          <h3 class="skill-cat-title">
+            <span>Công cụ AI</span>
+            <span class="cat-index">03</span>
+          </h3>
+          <ul class="skill-item-list">
+            <li><strong>ChatGPT & Gemini:</strong> Hỗ trợ nghiên cứu thông tin, lập dàn ý và biên soạn nội dung.</li>
+            <li><strong>Sider & Extensions:</strong> Tối ưu quy trình tìm kiếm và xử lý văn bản nhanh.</li>
+            <li><strong>Nano Banana:</strong> Hỗ trợ tạo và xử lý hình ảnh minh họa bài viết.</li>
+            <li><strong>Tư duy ứng dụng:</strong> Sử dụng AI như trợ lý tăng hiệu suất, giữ nguyên văn phong tự nhiên.</li>
+          </ul>
+        </div>
+
+        <!-- Nhóm 4: Design -->
+        <div class="skill-category-col">
+          <h3 class="skill-cat-title">
+            <span>Thiết kế Đồ họa</span>
+            <span class="cat-index">04</span>
+          </h3>
+          <ul class="skill-item-list">
+            <li><strong>Canva:</strong> Sử dụng thành thạo để thiết kế banner, logo và đồ họa web.</li>
+            <li><strong>Hình ảnh Website:</strong> Chỉnh sửa kích thước, cắt ghép và lựa chọn icon đồng bộ.</li>
+            <li><strong>Tối ưu hình ảnh:</strong> Nén dung lượng chuẩn web, đảm bảo tốc độ tải trang.</li>
+          </ul>
+        </div>
+
+        <!-- Nhóm 5: Technical -->
+        <div class="skill-category-col">
+          <h3 class="skill-cat-title">
+            <span>Kỹ thuật Website</span>
+            <span class="cat-index">05</span>
+          </h3>
+          <ul class="skill-item-list">
+            <li><strong>HTML & CSS:</strong> Đọc hiểu mã nguồn, tùy chỉnh giao diện và sửa lỗi hiển thị layout.</li>
+            <li><strong>Hosting & Plesk:</strong> Thao tác cơ bản trên bảng điều khiển Plesk quản trị web.</li>
+            <li><strong>Responsive:</strong> Tối ưu hóa trải nghiệm hiển thị trên Desktop, Tablet, Mobile.</li>
+          </ul>
+        </div>
+
+        <!-- Nhóm 6: Soft Skills -->
+        <div class="skill-category-col">
+          <h3 class="skill-cat-title">
+            <span>Kỹ năng mềm</span>
+            <span class="cat-index">06</span>
+          </h3>
+          <ul class="skill-item-list">
+            <li><strong>Kiểm tra dữ liệu:</strong> Cẩn thận, đối chiếu phát hiện lỗi Duplicate và Fake.</li>
+            <li><strong>Làm việc nhóm:</strong> Trao đổi ý tưởng, thảo luận và giải quyết vấn đề hiệu quả.</li>
+            <li><strong>Chăm sóc khách hàng:</strong> Hỗ trợ chuyên nghiệp, hòa đồng và lễ phép.</li>
+            <li><strong>Tinh thần trách nhiệm:</strong> Bám sát tiến độ, tôn trọng deadline và KPI công việc.</li>
+          </ul>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       CONTACT — LIÊN HỆ
+       ========================================================================== -->
+  <section class="contact-section" id="contact">
+    <div class="container">
+      <div class="contact-grid">
+        
+        <div>
+          <span class="eyebrow">05 // Kết nối hợp tác</span>
+          <h2 class="contact-heading-large">
+            Cùng tạo nên những<br>
+            <span class="italic-red">trải nghiệm website chỉn chu.</span>
+          </h2>
+          <p class="contact-subtext">
+            Tôi luôn sẵn sàng đón nhận những cơ hội nghề nghiệp trong lĩnh vực Quản trị Website, SEO Content và Thương mại điện tử. Quý công ty có thể liên hệ trực tiếp qua email hoặc điện thoại để trao đổi chi tiết.
+          </p>
+          <div style="display: flex; gap: 14px; flex-wrap: wrap;">
+            <a href="mailto:vnphuonguyen2719@gmail.com" class="btn-editorial">
+              <span>Gửi thư qua Email</span>
+              <span>↗</span>
+            </a>
+            <a href="tel:0777482162" class="btn-editorial-outline">
+              <span>Gọi: 0777 482 162</span>
+            </a>
+          </div>
+        </div>
+
+        <div class="contact-details-box">
+          <div class="contact-item-row">
+            <div class="contact-row-label">Họ và tên</div>
+            <div class="contact-row-val" style="pointer-events: none;">Võ Nguyễn Phương Uyên</div>
+          </div>
+
+          <div class="contact-item-row">
+            <div class="contact-row-label">Địa chỉ Email</div>
+            <a href="mailto:vnphuonguyen2719@gmail.com" class="contact-row-val">vnphuonguyen2719@gmail.com</a>
+          </div>
+
+          <div class="contact-item-row">
+            <div class="contact-row-label">Số điện thoại</div>
+            <a href="tel:0777482162" class="contact-row-val">0777 482 162</a>
+          </div>
+
+          <div class="contact-item-row" style="margin-bottom: 0;">
+            <div class="contact-row-label">Khu vực làm việc</div>
+            <div class="contact-location-val">75 Trần Thị Trọng, Phường Tân Sơn, TP. Hồ Chí Minh</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       FOOTER
+       ========================================================================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-inner">
+        <div>
+          <span>© 2026 Võ Nguyễn Phương Uyên. Bảo lưu mọi quyền.</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
