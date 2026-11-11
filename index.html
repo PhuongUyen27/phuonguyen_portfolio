@@ -3,9 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Võ Nguyễn Phương Uyên — Chuyên viên Nội dung Website & SEO</title>
+  <title>Võ Nguyễn Phương Uyên — Chuyên Viên Vận Hành Website (E-commerce / Ngành Mỹ Phẩm)</title>
   
-  <meta name="description" content="Portfolio của Võ Nguyễn Phương Uyên — Chuyên viên Quản trị Nội dung Website, SEO On-page và E-commerce WooCommerce với nền tảng Công nghệ Thông tin.">
+  <meta name="description" content="Portfolio của Võ Nguyễn Phương Uyên — Chuyên Viên Vận Hành Website E-commerce (Ngành Mỹ Phẩm), quản trị WooCommerce, theo dõi tồn kho, đơn hàng, Google Analytics, kiểm tra lỗi UI/UX và phối hợp liên phòng ban.">
   <meta name="author" content="Võ Nguyễn Phương Uyên">
 
   <!-- Typography: Playfair Display + Be Vietnam Pro -->
@@ -1093,6 +1093,96 @@
         text-align: center;
       }
     }
+    /* ==========================================================================
+       PRINT STYLESHEET (XUẤT PDF CHUẨN A4 IN ẤN SẮC NÉT)
+       ========================================================================== */
+    @media print {
+      @page {
+        size: A4;
+        margin: 14mm 16mm;
+      }
+
+      body {
+        background-color: #FFFFFF !important;
+        color: #1A1A1A !important;
+        font-size: 13px !important;
+        line-height: 1.5 !important;
+        -webkit-print-color-adjust: exact !important;
+        print-color-adjust: exact !important;
+      }
+
+      /* Ẩn các thành phần không cần in ra PDF */
+      header.site-header,
+      .hero-action-row,
+      .project-link-btn,
+      .contact-section a.btn-editorial,
+      .contact-section a.btn-editorial-outline {
+        display: none !important;
+      }
+
+      .container {
+        max-width: 100% !important;
+        padding: 0 !important;
+      }
+
+      .hero-section {
+        padding: 10px 0 30px !important;
+        border-bottom: 1px solid #D8CEBE !important;
+      }
+
+      .hero-name {
+        font-size: 38px !important;
+      }
+
+      .hero-portrait-frame {
+        padding: 8px !important;
+        background: #F7F3EA !important;
+      }
+
+      .portrait-inner {
+        height: 280px !important;
+      }
+
+      .section-pad {
+        padding: 30px 0 !important;
+      }
+
+      /* Tránh bị cắt đôi nội dung giữa 2 trang */
+      .experience-row,
+      .project-item,
+      .pillars-grid,
+      .skill-category-col,
+      .contact-grid {
+        break-inside: avoid !important;
+        page-break-inside: avoid !important;
+      }
+
+      .browser-content {
+        height: 220px !important;
+      }
+
+      .project-showcase {
+        gap: 30px !important;
+        margin-top: 20px !important;
+      }
+
+      .project-item {
+        padding-bottom: 24px !important;
+      }
+
+      .skills-editorial-grid {
+        margin-top: 20px !important;
+      }
+
+      .skill-category-col {
+        padding: 16px 14px !important;
+      }
+
+      .contact-section {
+        padding: 30px 0 !important;
+        background: #F7F3EA !important;
+      }
+    }
   </style>
 </head>
 <body>
@@ -1144,27 +1234,27 @@
           </h1>
 
           <div class="hero-roles">
-            <span>Website Content</span>
+            <span>Chuyên Viên Vận Hành Website</span>
             <span class="role-sep">/</span>
-            <span>SEO & E-commerce</span>
+            <span>E-commerce & Ngành Mỹ Phẩm</span>
           </div>
 
           <p class="hero-intro">
-            Tôi có nền tảng Công nghệ Thông tin, kinh nghiệm quản trị website WordPress, tối ưu nội dung và vận hành dữ liệu thương mại điện tử. Tôi yêu thích việc kết hợp tư duy kỹ thuật, nội dung và thẩm mỹ để tạo nên những trải nghiệm website chỉn chu.
+            Tôi có nền tảng Công nghệ Thông tin, kinh nghiệm vận hành website thương mại điện tử hằng ngày, quản lý dữ liệu sản phẩm, biến thể, giá bán, tồn kho và trạng thái đơn hàng trên WooCommerce. Thành thạo theo dõi traffic, hành vi người dùng bằng Google Analytics, phối hợp nhịp nhàng với team Design/Marketing để cập nhật campaign, landing page và phối hợp kho vận, chăm sóc khách hàng (CS) xử lý nhanh các vấn đề phát sinh.
           </p>
 
           <div class="hero-meta-grid">
             <div class="meta-col">
-              <div class="meta-label">Chuyên môn</div>
-              <div class="meta-val">Web Content & SEO</div>
+              <div class="meta-label">Vị trí mục tiêu</div>
+              <div class="meta-val">Vận Hành Website</div>
             </div>
             <div class="meta-col">
               <div class="meta-label">Học vấn</div>
               <div class="meta-val">Cử nhân CNTT (HUIT)</div>
             </div>
             <div class="meta-col">
-              <div class="meta-label">Địa điểm</div>
-              <div class="meta-val">TP. Hồ Chí Minh</div>
+              <div class="meta-label">GitHub Pages</div>
+              <div class="meta-val"><a href="https://phuonguyen27.github.io/phuonguyen_portfolio/" target="_blank" rel="noopener noreferrer" style="color:var(--accent-red); text-decoration:none; border-bottom:1px solid var(--accent-red);">phuonguyen27</a></div>
             </div>
           </div>
 
@@ -1183,7 +1273,7 @@
         <div class="hero-portrait-col">
           <div class="hero-portrait-frame">
             <div class="portrait-inner">
-              <img src="avatar.png" alt="Chân dung Võ Nguyễn Phương Uyên" onerror="this.onerror=null; this.parentElement.innerHTML='<div style=\'text-align:center; padding:30px; font-family:var(--font-serif); font-size:24px;\'>Võ Nguyễn Phương Uyên<br><span style=\'font-size:12px; font-family:var(--font-sans); color:var(--text-muted); text-transform:uppercase; letter-spacing:0.12em;\'>Web Content Specialist</span></div>';">
+              <img src="avatar.png" alt="Chân dung Võ Nguyễn Phương Uyên" onerror="this.onerror=null; this.parentElement.innerHTML='<div style=\'text-align:center; padding:30px; font-family:var(--font-serif); font-size:24px;\'>Võ Nguyễn Phương Uyên<br><span style=\'font-size:12px; font-family:var(--font-sans); color:var(--text-muted); text-transform:uppercase; letter-spacing:0.12em;\'>Website Operations Specialist</span></div>';">
             </div>
             <div class="portrait-caption">
               <span><strong>01 // Chân dung</strong></span>
@@ -1205,18 +1295,18 @@
       <div class="editorial-split">
         <div>
           <span class="eyebrow">01 // Định vị chuyên môn</span>
-          <h2 class="section-title">Nội dung chỉn chu trên nền tảng kỹ thuật vững vàng</h2>
+          <h2 class="section-title">Vận hành website chuẩn xác, tối ưu luồng thương mại điện tử</h2>
           <p class="section-title-sub">
-            Kết hợp kiến thức lập trình Công nghệ Thông tin cùng sự nhạy bén trong ngôn từ và trải nghiệm người dùng On-page.
+            Kết hợp kiến thức Công nghệ Thông tin, kinh nghiệm quản trị WooCommerce chuyên sâu, theo dõi Google Analytics và kỹ năng phối hợp liên phòng ban nhịp nhàng.
           </p>
         </div>
 
         <div>
           <p class="about-lead">
-            "Không chỉ đơn thuần là viết bài, tôi tập trung vào <span class="highlight-lead">cách nội dung vận hành</span> trên hệ thống website: từ cấu trúc heading, tốc độ tải trang, dữ liệu sản phẩm chuẩn xác cho đến khả năng hiển thị tối ưu trên công cụ tìm kiếm."
+            "Trong ngành bán lẻ và mỹ phẩm, website chính là showroom thương hiệu trực tuyến. Tôi tập trung vào <span class="highlight-lead">tính ổn định và chính xác trong vận hành hằng ngày</span>: từ cập nhật chiến dịch/landing page, thông tin biến thể và tồn kho sản phẩm, đến kiểm soát trải nghiệm hiển thị Desktop/Mobile và luồng đơn hàng thông suốt."
           </p>
           <p class="about-body">
-            Tốt nghiệp ngành Công nghệ Thông tin tại Trường Đại học Công Thương TP.HCM, tôi sở hữu lợi thế am hiểu cấu trúc HTML/CSS, hệ thống quản trị nội dung CMS WordPress và cơ chế quản trị hosting Plesk. Khi kết hợp với kinh nghiệm kiểm duyệt dữ liệu nghiêm ngặt và kỹ năng biên tập nội dung, tôi có thể chủ động xử lý các vấn đề giao diện, tối ưu On-page và triển khai dữ liệu thương mại điện tử mà không bị phụ thuộc hoàn toàn vào đội ngũ kỹ thuật.
+            Tốt nghiệp ngành Công nghệ Thông tin tại Trường Đại học Công Thương TP.HCM, tôi sở hữu lợi thế am hiểu sâu cấu trúc HTML/CSS, hệ thống WooCommerce, cơ chế hosting Plesk và theo dõi lưu lượng qua Google Analytics. Tôi chủ động phối hợp với team Design/Marketing để triển khai banner, campaign đúng tiến độ; đồng thời làm việc chặt chẽ cùng bộ phận Chăm sóc khách hàng (CS) và Kho vận để xử lý đơn hàng, theo dõi tồn kho và giải quyết triệt để các vấn đề phát sinh trên hệ thống.
           </p>
         </div>
       </div>
@@ -1225,25 +1315,25 @@
       <div class="pillars-grid">
         <div class="pillar-item">
           <span class="pillar-num">A.</span>
-          <h3 class="pillar-heading">Quản trị Website</h3>
+          <h3 class="pillar-heading">Vận Hành E-commerce</h3>
           <p class="pillar-desc">
-            Thành thạo WordPress CMS, các theme phổ biến như Flatsome, Elementor. Tự tin tùy biến bố cục bằng CSS/HTML, quản lý hosting Plesk và cấu hình go-live website hoàn chỉnh.
+            Quản lý dữ liệu sản phẩm, biến thể (màu sắc, dung tích mỹ phẩm), giá bán, tồn kho và trạng thái đơn hàng trên WooCommerce. Phối hợp nhịp nhàng với bộ phận kho vận và CS giải quyết phát sinh.
           </p>
         </div>
 
         <div class="pillar-item">
           <span class="pillar-num">B.</span>
-          <h3 class="pillar-heading">Nội dung & SEO</h3>
+          <h3 class="pillar-heading">Hiển Thị & Campaign</h3>
           <p class="pillar-desc">
-            Biên tập nội dung chuẩn On-page, tối ưu thẻ meta, cấu trúc liên kết và theo dõi tình trạng Google Index. Ứng dụng AI thông minh để tối ưu hóa quy trình nghiên cứu và lên ý tưởng.
+            Phối hợp với Design/Marketing cập nhật banner, landing page, chiến dịch khuyến mãi; kiểm tra giao diện Responsive Desktop/Mobile, phát hiện và xử lý lỗi hiển thị kịp thời.
           </p>
         </div>
 
         <div class="pillar-item">
           <span class="pillar-num">C.</span>
-          <h3 class="pillar-heading">Kiểm duyệt Dữ liệu</h3>
+          <h3 class="pillar-heading">Dữ Liệu & Phân Tích</h3>
           <p class="pillar-desc">
-            Kinh nghiệm kiểm duyệt nội dung sàn thương mại điện tử với thành tích Top 1 KPI. Cẩn trọng, tỉ mỉ trong việc phát hiện trùng lặp (Duplicate), thông tin giả mạo (Fake) và lỗi hiển thị.
+            Theo dõi traffic, hành vi người dùng bằng Google Analytics; tổng hợp báo cáo sản phẩm bán chạy, tỷ lệ chuyển đổi và theo dõi báo cáo lỗi vận hành website hằng ngày.
           </p>
         </div>
       </div>
@@ -1277,20 +1367,20 @@
             <div class="exp-location">TP. Hồ Chí Minh</div>
           </div>
           <div class="exp-content">
-            <h4 class="exp-role-title">Fulfillment — Hoàn thiện Website & Quản trị Nội dung</h4>
+            <h4 class="exp-role-title">Fulfillment — Vận Hành & Quản Trị Website Doanh Nghiệp</h4>
             <ul class="exp-tasks">
-              <li>Trực tiếp quản trị và vận hành nội dung website trên nền tảng <strong>WordPress CMS</strong>, thực hiện cập nhật, biên tập và tối ưu nội dung theo yêu cầu khách hàng.</li>
-              <li>Xây dựng, chỉnh sửa và sắp xếp nội dung các trang website, đảm bảo thông tin rõ ràng, bố cục hợp lý và phù hợp với định hướng thương hiệu.</li>
-              <li>Sử dụng linh hoạt các theme phổ biến như <strong>Flatsome, Elementor, BB-theme</strong>; tùy chỉnh giao diện bằng <strong>CSS, HTML</strong> để đáp ứng các yêu cầu thiết kế mà template mặc định chưa hỗ trợ.</li>
-              <li>Cập nhật thông tin sản phẩm, hình ảnh và dữ liệu đơn hàng trên <strong>WooCommerce</strong>, đảm bảo tính chính xác và đồng nhất của dữ liệu.</li>
-              <li>Thực hiện tối ưu nội dung website theo các tiêu chí <strong>SEO cơ bản</strong>, tra cứu index trên Google, kiểm tra tốc độ tải trang và điểm SEO.</li>
-              <li>Thực hiện các thao tác go-live website: Trỏ tên miền chính, cấu hình Contact Form 7, xử lý các thao tác quản trị trên <strong>Plesk</strong>.</li>
-              <li>Nghiên cứu, lựa chọn và chỉnh sửa hình ảnh, banner, logo bằng <strong>Canva</strong> và công cụ AI hỗ trợ sáng tạo hình ảnh.</li>
-              <li>Ứng dụng <strong>ChatGPT, Sider, Gemini, Nano Banana</strong> để hỗ trợ nghiên cứu thông tin, phát triển ý tưởng, biên soạn nội dung và tối ưu hiệu suất công việc.</li>
-              <li>Tiếp nhận yêu cầu, xử lý ticket và hỗ trợ kỹ thuật website cho khách hàng qua hotline, email một cách nhanh chóng, chuyên nghiệp.</li>
+              <li>Trực tiếp <strong>quản trị và vận hành website công ty hằng ngày</strong> trên nền tảng WordPress CMS, bảo đảm tính ổn định, an toàn và thông suốt của hệ thống.</li>
+              <li><strong>Quản lý dữ liệu sản phẩm, đơn hàng, nhập liệu sản phẩm và cấu hình biến thể sản phẩm</strong> (quy cách, dung tích, màu sắc, phân loại mỹ phẩm/tiêu dùng) trên <strong>WooCommerce</strong>; cập nhật giá bán, chương trình khuyến mãi chính xác.</li>
+              <li><strong>Theo dõi tồn kho và trạng thái đơn hàng</strong> trên hệ thống WooCommerce/CRM, phối hợp với bộ phận kho vận và chăm sóc khách hàng (CS) để xử lý nhanh các đơn hàng tồn đọng, lỗi thanh toán hoặc phát sinh giao vận.</li>
+              <li><strong>Theo dõi tình trạng hoạt động của website</strong>, chủ động phát hiện lỗi hệ thống, lỗi hiển thị hoặc lỗi tính năng và trực tiếp xử lý hoặc phối hợp với đội ngũ kỹ thuật khắc phục triệt để.</li>
+              <li>Làm việc với <strong>team Design/Marketing</strong> để cập nhật landing page, banner chiến dịch, thông điệp truyền thông và nội dung khuyến mãi theo từng đợt campaign.</li>
+              <li><strong>Kiểm tra hiển thị website trên cả Desktop và Mobile</strong> (Responsive), tối ưu giao diện bằng HTML/CSS để đảm bảo trải nghiệm người dùng mượt mà và tối đa tỷ lệ chuyển đổi.</li>
+              <li><strong>Theo dõi traffic, hành vi người dùng và hiệu quả website qua Google Analytics</strong>; hỗ trợ tổng hợp báo cáo dữ liệu định kỳ: lượng truy cập, sản phẩm bán chạy, hành vi mua hàng và các lỗi vận hành phát sinh.</li>
+              <li>Thực hiện tối ưu SEO On-page, kiểm tra tốc độ tải trang, tra cứu index Google, cấu hình Contact Form 7 và quản trị hệ thống hosting trên <strong>Plesk</strong>.</li>
+              <li>Ứng dụng <strong>ChatGPT, Sider, Gemini</strong> để hỗ trợ rà soát nội dung sản phẩm, phân tích thông tin đối thủ và nâng cao hiệu suất xử lý công việc hằng ngày.</li>
             </ul>
             <div class="exp-badge-achievement">
-              Thành tích: <strong>Hoàn thành tốt dự án</strong>, hỗ trợ khách hàng nhiệt tình, hoàn thành công việc có trách nhiệm, đạt số liệu KPI mà công ty đưa ra.
+              Thành tích: <strong>Hoàn thành xuất sắc các dự án vận hành</strong>, đảm bảo 100% website hoạt động ổn định, dữ liệu sản phẩm chính xác, phối hợp liên phòng ban nhịp nhàng và đạt KPI đề ra.
             </div>
           </div>
         </div>
@@ -1303,16 +1393,16 @@
             <div class="exp-location">TP. Hồ Chí Minh</div>
           </div>
           <div class="exp-content">
-            <h4 class="exp-role-title">Nhân viên Kiểm duyệt Nội dung</h4>
+            <h4 class="exp-role-title">Nhân viên Kiểm duyệt Nội dung & Dữ liệu E-commerce</h4>
             <ul class="exp-tasks">
-              <li>Xử lý dữ liệu hình ảnh thông qua hệ thống quản lý của công ty và xác minh thông tin từ data của khách hàng.</li>
-              <li>Xem xét, phân loại và kiểm duyệt nội dung trên nền tảng thương mại điện tử theo yêu cầu của dự án <strong>App Social Video</strong>.</li>
-              <li>Đánh dấu, gỡ bỏ các nội dung sai phạm theo đúng quy định và chính sách của dự án.</li>
-              <li>So sánh, đối chiếu dữ liệu để phát hiện các trường hợp <strong>Duplicate</strong> (trùng lặp) và <strong>Fake</strong> (giả mạo).</li>
-              <li>Đảm bảo hoàn thành khối lượng và chất lượng công việc theo yêu cầu khắt khe từ phía khách hàng.</li>
+              <li>Kiểm duyệt, phân loại và quản lý dữ liệu sản phẩm, hình ảnh và nội dung trên nền tảng thương mại điện tử thuộc dự án <strong>App Social Video E-commerce</strong>.</li>
+              <li>So sánh, đối chiếu dữ liệu để phát hiện và xử lý kịp thời các trường hợp <strong>Duplicate</strong> (trùng lặp sản phẩm), <strong>Fake</strong> (giả mạo thương hiệu/thông tin) và vi phạm quy chế bán hàng.</li>
+              <li>Sử dụng hệ thống phần mềm quản lý nội bộ, quy trình xử lý ticket hỗ trợ và tuân thủ chặt chẽ tiêu chuẩn vận hành sàn thương mại điện tử.</li>
+              <li>Phối hợp giải quyết khiếu nại, rà soát thông tin sản phẩm và đảm bảo dữ liệu hiển thị chính xác cho người tiêu dùng.</li>
+              <li>Đảm bảo tiến độ xử lý khối lượng dữ liệu lớn mỗi ngày với độ chính xác và tính bảo mật cao.</li>
             </ul>
             <div class="exp-badge-achievement">
-              Thành tích: <strong>Luôn đạt Top 1 KPI hàng tháng</strong>, nghiêm túc trong công việc, ít sai sót trong quá trình làm việc và kiểm duyệt.
+              Thành tích: <strong>Liên tục đạt Top 1 KPI hàng tháng</strong>, duy trì tỷ lệ sai sót cực thấp (&lt; 0.1%), tác phong cẩn trọng, kỷ luật và chịu được áp lực tiến độ cao.
             </div>
           </div>
         </div>
@@ -1386,7 +1476,7 @@
                   <span class="dot"></span>
                   <span class="dot"></span>
                 </div>
-                <div class="browser-url">https://saparosegardenresortcomvn282.mbws.vn</div>
+                <div class="browser-url">https://saparosegardenresort.com.vn/</div>
               </div>
               <div class="browser-content">
                 <div class="mockup-preview visual-sapa">
@@ -1400,7 +1490,7 @@
                   </div>
                   <div class="mockup-hero-box">
                     <div class="mockup-hero-title">Khu Nghỉ Dưỡng Sinh Thái</div>
-                    <div class="mockup-hero-sub">Trải nghiệm không gian nghỉ dưỡng Tây Bắc</div>
+                    <div class="mockup-hero-sub">Vận hành giao diện & tối ưu trải nghiệm khách hàng</div>
                   </div>
                   <div class="mockup-footer-stats">
                     <span>WordPress CMS</span>
@@ -1412,20 +1502,20 @@
             </div>
           </div>
           <div class="project-info-col">
-            <div class="project-index">01 / DỰ ÁN NGHỈ DƯỠNG</div>
+            <div class="project-index">01 / DỰ ÁN NGHỈ DƯỠNG & DỊCH VỤ</div>
             <div class="project-category">Du lịch & Khách sạn</div>
             <h3 class="project-title">Sapa Rose Garden Resort</h3>
             <p class="project-desc">
-              Tiếp nhận yêu cầu từ khách hàng và triển khai hoàn thiện giao diện website trên WordPress. Tùy chỉnh bố cục và xây dựng thêm các section theo yêu cầu thực tế; chỉnh sửa hình ảnh, icon phù hợp nhận diện thương hiệu. Tùy chỉnh CSS/HTML và tối ưu Responsive đồng nhất trên Desktop, Tablet và Mobile.
+              Quản trị và hoàn thiện giao diện website trên WordPress. Tùy chỉnh bố cục section theo chiến dịch thực tế; cập nhật hình ảnh, dịch vụ, bảng giá và tối ưu trải nghiệm Responsive đồng nhất trên Desktop, Tablet và Mobile. Kiểm tra và xử lý lỗi giao diện để đảm bảo tốc độ tải trang nhanh và vận hành ổn định.
             </p>
             <div class="project-tech-stack">
               <span class="tech-tag">WordPress CMS</span>
               <span class="tech-tag">HTML & CSS</span>
               <span class="tech-tag">Responsive Design</span>
-              <span class="tech-tag">Tối ưu hình ảnh</span>
+              <span class="tech-tag">Kiểm tra lỗi UI/UX</span>
             </div>
-            <a href="https://saparosegardenresortcomvn282.mbws.vn/" target="_blank" rel="noopener noreferrer" class="project-link-btn">
-              <span>Mở website thực tế</span>
+            <a href="https://saparosegardenresort.com.vn/" target="_blank" rel="noopener noreferrer" class="project-link-btn">
+              <span>Mở website chính: saparosegardenresort.com.vn</span>
               <span>↗</span>
             </a>
           </div>
@@ -1441,7 +1531,7 @@
                   <span class="dot"></span>
                   <span class="dot"></span>
                 </div>
-                <div class="browser-url">https://hylap122.mbws.vn</div>
+                <div class="browser-url">https://dinhcuhylap.net/</div>
               </div>
               <div class="browser-content">
                 <div class="mockup-preview visual-greece">
@@ -1454,7 +1544,7 @@
                   </div>
                   <div class="mockup-hero-box">
                     <div class="mockup-hero-title">Định Cư Hy Lạp</div>
-                    <div class="mockup-hero-sub">Chương trình đầu tư nhận thẻ thường trú Châu Âu</div>
+                    <div class="mockup-hero-sub">Hệ thống Landing Page & Thu Thập Dữ Liệu Khách Hàng</div>
                   </div>
                   <div class="mockup-footer-stats">
                     <span>Contact Form 7</span>
@@ -1466,20 +1556,20 @@
             </div>
           </div>
           <div class="project-info-col">
-            <div class="project-index">02 / DỰ ÁN TƯ VẤN ĐẦU TƯ</div>
+            <div class="project-index">02 / DỰ ÁN TƯ VẤN ĐẦU TƯ & DỊCH VỤ</div>
             <div class="project-category">Dịch vụ & Tư vấn Định cư</div>
             <h3 class="project-title">Định Cư Hy Lạp</h3>
             <p class="project-desc">
-              Xây dựng và sắp xếp các trang nội dung giới thiệu chương trình đầu tư Golden Visa. Cấu hình Contact Form 7 thu thập thông tin khách hàng tiềm năng, kiểm tra các liên kết chuyển hướng và tối ưu bố cục văn bản rõ ràng, dễ tiếp cận trên mọi thiết bị.
+              Vận hành và sắp xếp hệ thống landing page giới thiệu chương trình đầu tư. Cấu hình Contact Form 7 tiếp nhận dữ liệu khách hàng tiềm năng, kiểm tra thông suốt luồng data gửi về email/CRM và phối hợp với đội ngũ tư vấn xử lý thông tin kịp thời.
             </p>
             <div class="project-tech-stack">
               <span class="tech-tag">WordPress</span>
               <span class="tech-tag">Contact Form 7</span>
-              <span class="tech-tag">Biên tập nội dung</span>
-              <span class="tech-tag">Lead Capture</span>
+              <span class="tech-tag">Landing Page Campaign</span>
+              <span class="tech-tag">Lead Capture & CRM</span>
             </div>
-            <a href="https://hylap122.mbws.vn/" target="_blank" rel="noopener noreferrer" class="project-link-btn">
-              <span>Mở website thực tế</span>
+            <a href="https://dinhcuhylap.net/" target="_blank" rel="noopener noreferrer" class="project-link-btn">
+              <span>Mở website chính: dinhcuhylap.net</span>
               <span>↗</span>
             </a>
           </div>
@@ -1495,7 +1585,7 @@
                   <span class="dot"></span>
                   <span class="dot"></span>
                 </div>
-                <div class="browser-url">https://lotusfairwaygolftravelcom915.mbws.vn</div>
+                <div class="browser-url">https://lotusfairwaygolftravel.com/</div>
               </div>
               <div class="browser-content">
                 <div class="mockup-preview visual-golf">
@@ -1509,11 +1599,11 @@
                   </div>
                   <div class="mockup-hero-box">
                     <div class="mockup-hero-title">Golf Travel & Resorts</div>
-                    <div class="mockup-hero-sub">Tour golf cao cấp kết hợp du lịch nghỉ dưỡng</div>
+                    <div class="mockup-hero-sub">Vận hành nội dung tour & chiến dịch tiếp thị</div>
                   </div>
                   <div class="mockup-footer-stats">
-                    <span>Banner Design</span>
-                    <span>SEO Cơ bản</span>
+                    <span>Banner Campaign</span>
+                    <span>Tối ưu SEO</span>
                     <span>Tốc độ tải trang</span>
                   </div>
                 </div>
@@ -1521,20 +1611,20 @@
             </div>
           </div>
           <div class="project-info-col">
-            <div class="project-index">03 / DỰ ÁN THỂ THAO CAO CẤP</div>
+            <div class="project-index">03 / DỰ ÁN THỂ THAO & LỮ HÀNH CAO CẤP</div>
             <div class="project-category">Thể thao & Lữ hành</div>
             <h3 class="project-title">Lotus Fairway Golf Travel</h3>
             <p class="project-desc">
-              Hoàn thiện website giới thiệu dịch vụ tour golf cao cấp. Thiết kế và điều chỉnh banner hình ảnh theo tông màu sang trọng, tối ưu dung lượng hình ảnh để đảm bảo tốc độ tải trang nhanh và hỗ trợ thiết lập điểm SEO On-page cơ bản.
+              Vận hành website dịch vụ tour golf cao cấp. Phối hợp với bộ phận thiết kế để cập nhật banner chiến dịch theo từng mùa vụ, tối ưu hóa kích thước hình ảnh để đảm bảo tốc độ tải trang nhanh và theo dõi hiệu quả hiển thị On-page trên công cụ tìm kiếm.
             </p>
             <div class="project-tech-stack">
               <span class="tech-tag">WordPress CMS</span>
-              <span class="tech-tag">Thiết kế Canva</span>
-              <span class="tech-tag">SEO On-page</span>
-              <span class="tech-tag">Tối ưu Media</span>
+              <span class="tech-tag">Thiết kế Banner</span>
+              <span class="tech-tag">Tối ưu Tốc độ</span>
+              <span class="tech-tag">Quản trị Media</span>
             </div>
-            <a href="https://lotusfairwaygolftravelcom915.mbws.vn/" target="_blank" rel="noopener noreferrer" class="project-link-btn">
-              <span>Mở website thực tế</span>
+            <a href="https://lotusfairwaygolftravel.com/" target="_blank" rel="noopener noreferrer" class="project-link-btn">
+              <span>Mở website chính: lotusfairwaygolftravel.com</span>
               <span>↗</span>
             </a>
           </div>
@@ -1550,7 +1640,7 @@
                   <span class="dot"></span>
                   <span class="dot"></span>
                 </div>
-                <div class="browser-url">https://baoquanthucphamvn937.mbws.vn</div>
+                <div class="browser-url">https://baoquanthucpham.vn/</div>
               </div>
               <div class="browser-content">
                 <div class="mockup-preview visual-wrap">
@@ -1563,11 +1653,11 @@
                   </div>
                   <div class="mockup-hero-box">
                     <div class="mockup-hero-title">Màng Bọc Thực Phẩm</div>
-                    <div class="mockup-hero-sub">Giải pháp đóng gói và bảo quản thực phẩm an toàn</div>
+                    <div class="mockup-hero-sub">Hệ Thống Bán Hàng E-Commerce & Quản Trị Đơn Hàng</div>
                   </div>
                   <div class="mockup-footer-stats">
                     <span>WooCommerce</span>
-                    <span>Quản lý sản phẩm</span>
+                    <span>Quản lý biến thể & tồn kho</span>
                     <span>Google Index Check</span>
                   </div>
                 </div>
@@ -1575,20 +1665,20 @@
             </div>
           </div>
           <div class="project-info-col">
-            <div class="project-index">04 / DỰ ÁN THƯƠNG MẠI ĐIỆN TỬ</div>
-            <div class="project-category">Sản phẩm Tiêu dùng & Bao bì</div>
+            <div class="project-index">04 / DỰ ÁN THƯƠNG MẠI ĐIỆN TỬ (E-COMMERCE)</div>
+            <div class="project-category">Sản phẩm Tiêu dùng & Bán lẻ</div>
             <h3 class="project-title">Màng Bọc Thực Phẩm</h3>
             <p class="project-desc">
-              Cập nhật thông tin chi tiết sản phẩm, bảng giá và phân loại mặt hàng qua WooCommerce. Tối ưu hình ảnh sản phẩm, kiểm tra trạng thái lập chỉ mục (index) trên Google và hỗ trợ go-live website đúng tiến độ cam kết.
+              Trực tiếp quản lý dữ liệu sản phẩm, phân loại danh mục, cập nhật giá bán, nhập liệu và thiết lập biến thể sản phẩm (kích thước, độ dày, quy cách đóng gói) trên nền tảng WooCommerce. Theo dõi trạng thái đơn hàng, kiểm tra tính chính xác của dữ liệu tồn kho và đảm bảo website hoạt động ổn định trên hosting Plesk.
             </p>
             <div class="project-tech-stack">
               <span class="tech-tag">WooCommerce</span>
-              <span class="tech-tag">Dữ liệu Sản phẩm</span>
-              <span class="tech-tag">Google Index</span>
-              <span class="tech-tag">Plesk Host</span>
+              <span class="tech-tag">Biến thể & Tồn kho</span>
+              <span class="tech-tag">Trạng thái đơn hàng</span>
+              <span class="tech-tag">Quản trị Plesk</span>
             </div>
-            <a href="https://baoquanthucphamvn937.mbws.vn/" target="_blank" rel="noopener noreferrer" class="project-link-btn">
-              <span>Mở website thực tế</span>
+            <a href="https://baoquanthucpham.vn/" target="_blank" rel="noopener noreferrer" class="project-link-btn">
+              <span>Mở website chính: baoquanthucpham.vn</span>
               <span>↗</span>
             </a>
           </div>
@@ -1617,85 +1707,86 @@
 
       <div class="skills-editorial-grid">
 
-        <!-- Nhóm 1: Website CMS -->
+        <!-- Nhóm 1: Vận hành Website & E-commerce -->
         <div class="skill-category-col">
           <h3 class="skill-cat-title">
-            <span>Website CMS</span>
+            <span>Vận hành Website & CMS</span>
             <span class="cat-index">01</span>
           </h3>
           <ul class="skill-item-list">
-            <li><strong>WordPress CMS:</strong> Quản trị, biên tập nội dung, bài viết, trang và danh mục.</li>
-            <li><strong>WooCommerce:</strong> Nhập liệu sản phẩm, quản lý đơn hàng và dữ liệu bán hàng.</li>
-            <li><strong>Theme & Builder:</strong> Flatsome, Elementor, BB-theme...</li>
-            <li><strong>Go-Live Website:</strong> Cấu hình tên miền, form liên hệ và cài đặt plugin.</li>
+            <li><strong>WordPress & WooCommerce:</strong> Quản trị website hằng ngày, quản lý dữ liệu sản phẩm, nhập liệu sản phẩm và thiết lập biến thể (dung tích, màu sắc, phân loại).</li>
+            <li><strong>Tồn kho & Đơn hàng:</strong> Theo dõi tồn kho thực tế, kiểm soát luồng trạng thái đơn hàng và phối hợp xử lý phát sinh.</li>
+            <li><strong>Theme & Builder:</strong> Flatsome, Elementor, BB-theme; tối ưu giao diện bán hàng.</li>
+            <li><strong>Bảo trì hệ thống:</strong> Thao tác hosting Plesk, cấu hình tên miền, form liên hệ và bảo đảm website hoạt động ổn định.</li>
           </ul>
         </div>
 
-        <!-- Nhóm 2: SEO & Content -->
+        <!-- Nhóm 2: Google Analytics & Dữ liệu -->
         <div class="skill-category-col">
           <h3 class="skill-cat-title">
-            <span>SEO & Content</span>
+            <span>Google Analytics & Báo cáo</span>
             <span class="cat-index">02</span>
           </h3>
           <ul class="skill-item-list">
-            <li><strong>SEO On-page:</strong> Tối ưu thẻ Heading (H1-H4), Meta Title, Meta Description.</li>
-            <li><strong>Tối ưu nội dung:</strong> Mật độ từ khóa, trải nghiệm đọc và bố cục trang.</li>
-            <li><strong>Google Index:</strong> Kiểm tra trạng thái lập chỉ mục, tốc độ tải trang.</li>
-            <li><strong>Liên kết:</strong> Xây dựng hệ thống Social Media — Backlink cơ bản.</li>
+            <li><strong>Google Analytics:</strong> Theo dõi traffic, hành vi người dùng, nguồn truy cập và hiệu quả website.</li>
+            <li><strong>Báo cáo vận hành:</strong> Tổng hợp dữ liệu sản phẩm bán chạy, tỷ lệ chuyển đổi và các chỉ số hiệu suất bán hàng.</li>
+            <li><strong>Theo dõi lỗi:</strong> Báo cáo lỗi vận hành, link hỏng (404), lỗi form và tốc độ tải trang.</li>
+            <li><strong>SEO On-page:</strong> Tối ưu thẻ meta, heading, kiểm tra Google Index để tăng lượng traffic tự nhiên.</li>
           </ul>
         </div>
 
-        <!-- Nhóm 3: AI Tools -->
+        <!-- Nhóm 3: Phối hợp Campaign & UI/UX -->
         <div class="skill-category-col">
           <h3 class="skill-cat-title">
-            <span>Công cụ AI</span>
+            <span>Phối hợp Campaign & UI/UX</span>
             <span class="cat-index">03</span>
           </h3>
           <ul class="skill-item-list">
-            <li><strong>ChatGPT & Gemini:</strong> Hỗ trợ nghiên cứu thông tin, lập dàn ý và biên soạn nội dung.</li>
-            <li><strong>Sider & Extensions:</strong> Tối ưu quy trình tìm kiếm và xử lý văn bản nhanh.</li>
-            <li><strong>Nano Banana:</strong> Hỗ trợ tạo và xử lý hình ảnh minh họa bài viết.</li>
-            <li><strong>Tư duy ứng dụng:</strong> Sử dụng AI như trợ lý tăng hiệu suất, giữ nguyên văn phong tự nhiên.</li>
+            <li><strong>Làm việc với Design/Marketing:</strong> Cập nhật landing page, banner chiến dịch, chương trình khuyến mãi theo từng đợt campaign.</li>
+            <li><strong>Kiểm tra hiển thị (UI/UX):</strong> Rà soát giao diện trên Desktop và Mobile để đảm bảo trải nghiệm mua sắm mượt mà.</li>
+            <li><strong>Tùy chỉnh CSS/HTML:</strong> Sửa lỗi vỡ khung, căn chỉnh layout, banner mà không phụ thuộc dev.</li>
+            <li><strong>Canva & Đồ họa:</strong> Thiết kế, chỉnh sửa banner, nén hình ảnh chuẩn web để tối ưu tốc độ load.</li>
           </ul>
         </div>
 
-        <!-- Nhóm 4: Design -->
+        <!-- Nhóm 4: Quy trình & Công cụ Hỗ trợ -->
         <div class="skill-category-col">
           <h3 class="skill-cat-title">
-            <span>Thiết kế Đồ họa</span>
+            <span>CRM & Phối hợp Vận hành</span>
             <span class="cat-index">04</span>
           </h3>
           <ul class="skill-item-list">
-            <li><strong>Canva:</strong> Sử dụng thành thạo để thiết kế banner, logo và đồ họa web.</li>
-            <li><strong>Hình ảnh Website:</strong> Chỉnh sửa kích thước, cắt ghép và lựa chọn icon đồng bộ.</li>
-            <li><strong>Tối ưu hình ảnh:</strong> Nén dung lượng chuẩn web, đảm bảo tốc độ tải trang.</li>
+            <li><strong>Sử dụng CRM & Phần mềm:</strong> Quản lý ticket, dữ liệu khách hàng, email và hệ thống chat hỗ trợ.</li>
+            <li><strong>Phối hợp CS & Kho vận:</strong> Phối hợp xử lý đơn hàng lỗi, cập nhật trạng thái giao hàng và xử lý thắc mắc của khách.</li>
+            <li><strong>Quy trình E-commerce:</strong> Am hiểu quy trình vận hành thương mại điện tử, kênh bán hàng online (Website, Sàn TMĐT).</li>
+            <li><strong>Xác minh dữ liệu:</strong> Kinh nghiệm phát hiện trùng lặp (Duplicate), giả mạo (Fake) với kỷ luật Top 1 KPI.</li>
           </ul>
         </div>
 
-        <!-- Nhóm 5: Technical -->
+        <!-- Nhóm 5: Ứng dụng AI Nâng Cao Hiệu Suất -->
         <div class="skill-category-col">
           <h3 class="skill-cat-title">
-            <span>Kỹ thuật Website</span>
+            <span>Công cụ AI Hỗ trợ</span>
             <span class="cat-index">05</span>
           </h3>
           <ul class="skill-item-list">
-            <li><strong>HTML & CSS:</strong> Đọc hiểu mã nguồn, tùy chỉnh giao diện và sửa lỗi hiển thị layout.</li>
-            <li><strong>Hosting & Plesk:</strong> Thao tác cơ bản trên bảng điều khiển Plesk quản trị web.</li>
-            <li><strong>Responsive:</strong> Tối ưu hóa trải nghiệm hiển thị trên Desktop, Tablet, Mobile.</li>
+            <li><strong>ChatGPT & Gemini:</strong> Tự động hóa soạn thảo mô tả sản phẩm, gợi ý câu chữ quảng cáo và phân tích thông tin.</li>
+            <li><strong>Sider & Extensions:</strong> Rà soát lỗi nội dung, tra cứu dữ liệu nhanh và tổng hợp thông tin thị trường mỹ phẩm.</li>
+            <li><strong>AI Visual Tools:</strong> Hỗ trợ tinh chỉnh hình ảnh, xử lý phông nền sản phẩm nhanh chóng.</li>
           </ul>
         </div>
 
-        <!-- Nhóm 6: Soft Skills -->
+        <!-- Nhóm 6: Tác phong làm việc chuyên nghiệp -->
         <div class="skill-category-col">
           <h3 class="skill-cat-title">
-            <span>Kỹ năng mềm</span>
+            <span>Kỹ năng mềm & Tác phong</span>
             <span class="cat-index">06</span>
           </h3>
           <ul class="skill-item-list">
-            <li><strong>Kiểm tra dữ liệu:</strong> Cẩn thận, đối chiếu phát hiện lỗi Duplicate và Fake.</li>
-            <li><strong>Làm việc nhóm:</strong> Trao đổi ý tưởng, thảo luận và giải quyết vấn đề hiệu quả.</li>
-            <li><strong>Chăm sóc khách hàng:</strong> Hỗ trợ chuyên nghiệp, hòa đồng và lễ phép.</li>
-            <li><strong>Tinh thần trách nhiệm:</strong> Bám sát tiến độ, tôn trọng deadline và KPI công việc.</li>
+            <li><strong>Giải quyết vấn đề:</strong> Kỹ năng giao tiếp, xử lý tình huống phát sinh trên website nhanh và khéo léo.</li>
+            <li><strong>Làm việc nhóm:</strong> Phối hợp chặt chẽ, ăn ý với team Marketing, Design, CS và Kho vận.</li>
+            <li><strong>Làm việc độc lập:</strong> Chủ động giám sát hệ thống, chịu được áp lực công việc và bám sát tiến độ.</li>
+            <li><strong>Cẩn thận & Tỉ mỉ:</strong> Đảm bảo thông tin giá bán, tồn kho và khuyến mãi luôn chính xác 100%.</li>
           </ul>
         </div>
 
@@ -1718,7 +1809,7 @@
             <span class="italic-red">trải nghiệm website chỉn chu.</span>
           </h2>
           <p class="contact-subtext">
-            Tôi luôn sẵn sàng đón nhận những cơ hội nghề nghiệp trong lĩnh vực Quản trị Website, SEO Content và Thương mại điện tử. Quý công ty có thể liên hệ trực tiếp qua email hoặc điện thoại để trao đổi chi tiết.
+            Tôi luôn sẵn sàng đón nhận cơ hội làm việc ở vị trí <strong>Chuyên Viên Vận Hành Website (E-commerce / Ngành Mỹ Phẩm)</strong>. Quý công ty có thể liên hệ trực tiếp qua email hoặc số điện thoại để trao đổi chi tiết về yêu cầu công việc và kế hoạch vận hành.
           </p>
           <div style="display: flex; gap: 14px; flex-wrap: wrap;">
             <a href="mailto:vnphuonguyen2719@gmail.com" class="btn-editorial">
@@ -1745,6 +1836,11 @@
           <div class="contact-item-row">
             <div class="contact-row-label">Số điện thoại</div>
             <a href="tel:0777482162" class="contact-row-val">0777 482 162</a>
+          </div>
+
+          <div class="contact-item-row">
+            <div class="contact-row-label">GitHub Portfolio</div>
+            <a href="https://phuonguyen27.github.io/phuonguyen_portfolio/" target="_blank" rel="noopener noreferrer" class="contact-row-val" style="font-size:16px;">phuonguyen27.github.io/phuonguyen_portfolio</a>
           </div>
 
           <div class="contact-item-row" style="margin-bottom: 0;">
